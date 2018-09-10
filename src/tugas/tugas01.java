@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package tugas;
-
+import java.util.Scanner;
 /**
  *
  * @author ZEVA
@@ -22,5 +22,16 @@ public class tugas01 {
         String identitas = " nama lengkap / kelas / no";
         
         tampilJudul(identitas);
+        
+        int n = tampilInput();
+    }
+    
+    private static int tampilInput() {
+        Scanner baca = new Scanner(System.in);
+        
+            System.out.print("Bilangan ke-: ");
+            int n = baca.nextInt();
+            
+            return n;
     }
 }
