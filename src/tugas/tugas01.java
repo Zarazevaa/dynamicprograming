@@ -5,6 +5,7 @@
  */
 package tugas;
 import java.util.Scanner;
+import java.math.BigInteger;
 /**
  *
  * @author ZEVA
@@ -24,6 +25,8 @@ public class tugas01 {
         tampilJudul(identitas);
         
         int n = tampilInput();
+        
+        BigInteger hasil = fibo(n);
     }
     
     private static int tampilInput() {
@@ -33,5 +36,20 @@ public class tugas01 {
             int n = baca.nextInt();
             
             return n;
+    }
+    
+    private static BigInteger fibo(int n) {
+        
+        BigInteger[] hasil = new BigInteger[n];
+        
+        hasil[0] = BigInteger.ONE;
+        hasil[1] = BigInteger.ONE;
+        
+        for ( int i = 2; 1 < n; i++)
+        {
+            hasil[i] = hasil[i=1].add(hasil[i-2]);
+        }
+        
+        return hasil[n-1];
     }
 }
